@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-frost text-ink font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-medium tracking-tight text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-widest2 uppercase text-steel;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand text-white px-6 py-3
+           text-sm tracking-wideish uppercase font-body
+           transition-colors duration-300 ease-frame
+           hover:bg-brand-dark;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-mist text-ink px-6 py-3
+           text-sm tracking-wideish uppercase font-body
+           transition-colors duration-300 ease-frame
+           hover:border-brand hover:text-brand;
+  }
+
+  .nav-link {
+    @apply text-sm tracking-wideish uppercase text-steel transition-colors duration-300
+           hover:text-ink;
+  }
+
+  .nav-link-active {
+    @apply text-ink;
+  }
+}
+
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

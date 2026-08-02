@@ -1,0 +1,17 @@
+export const ROUTES = {
+  HOME: "/",
+  PORTFOLIO: "/portfolio",
+  BOOK: "/book",
+  CONTACT: "/contact",
+  LOGIN: "/login",
+  SERVICE_REQUEST: "/service-request",
+  DASHBOARD_REQUESTS: "/dashboard/requests",
+  ABOUT: "/about",
+  SERVICES: "/services",
+  DASHBOARD: "/dashboard",
+  DASHBOARD_BOOKINGS: "/dashboard/bookings",
+  DASHBOARD_GALLERIES: "/dashboard/galleries",
+  DASHBOARD_INVOICES: "/dashboard/invoices",
+  DASHBOARD_PROFILE: "/dashboard/profile",
+  NOT_FOUND: "*",
+};
