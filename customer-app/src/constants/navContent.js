@@ -8,5 +8,5 @@ export const NAV_ITEMS = [
   { label: "Services", to: ROUTES.SERVICES },
   { label: "FAQ", to: ROUTES.FAQ },
   { label: "Contact", to: ROUTES.CONTACT },
-  { label: "Profile", to: ROUTES.LOGIN },
+  // { label: "Profile", to: ROUTES.LOGIN },
 ];
