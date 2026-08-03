@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { SidebarProvider } from "@/context/SidebarContext";
-import Sidebar from "@/components/layout/SidebarTemp";
+import Sidebar from "@/components/layout/Sidebar";
 import DashboardTopbar from "@/components/layout/DashboardTopbar";
 import SEO from "@/components/common/SEO";
 
