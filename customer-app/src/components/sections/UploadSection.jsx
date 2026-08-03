@@ -50,7 +50,6 @@ export default function UploadSection() {
           you need — our editing team will take it from there.
         </p>
 
-        {/* STEP 1 — Photos & Videos */}
         {step === STEPS.MAIN && (
           <div className="mt-10">
             <div className="bg-white p-1 shadow-sm">
@@ -127,7 +126,6 @@ export default function UploadSection() {
           </div>
         )}
 
-        {/* STEP 2 — Dubbing yes/no choice */}
         {step === STEPS.DUBBING_CHOICE && (
           <div className="mt-14 flex flex-col items-center text-center">
             <div className="w-14 h-14 flex items-center justify-center bg-brand/10 text-brand mb-6">
@@ -169,7 +167,6 @@ export default function UploadSection() {
           </div>
         )}
 
-        {/* STEP 3 — Dubbing audio upload */}
         {step === STEPS.DUBBING_UPLOAD && (
           <div className="mt-10">
             <div className="flex items-center gap-2 mb-4">
