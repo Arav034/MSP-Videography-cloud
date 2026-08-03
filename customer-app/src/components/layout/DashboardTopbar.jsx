@@ -1,6 +1,7 @@
 import { Menu, ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useSidebar } from "@/hooks/useSidebar";
+import NotificationsBell from "@/components/common/NotificationsBell";
 import { ROUTES } from "@/constants/routes";
 
 const TITLES = {
@@ -30,13 +31,16 @@ export default function DashboardTopbar() {
         </h2>
       </div>
 
-      <Link
-        to={ROUTES.HOME}
-        className="flex items-center gap-2 text-sm text-steel hover:text-brand transition-colors duration-300"
-      >
-        <ArrowLeft size={16} />
-        Back to Site
-      </Link>
+      <div className="flex items-center gap-5">
+        <NotificationsBell />
+        <Link
+          to={ROUTES.HOME}
+          className="flex items-center gap-2 text-sm text-steel hover:text-brand transition-colors duration-300"
+        >
+          <ArrowLeft size={16} />
+          Back to Site
+        </Link>
+      </div>
     </header>
   );
 }

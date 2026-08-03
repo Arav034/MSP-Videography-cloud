@@ -7,6 +7,7 @@ import App from "@/App";
 import { AuthProvider } from "@/context/AuthContext";
 import { UploadProvider } from "@/context/UploadContext";
 import { RequestsProvider } from "@/context/RequestsContext";
+import { NotificationsProvider } from "@/context/NotificationsContext";
 import "@/index.css";
 
 createRoot(document.getElementById("root")).render(
@@ -14,11 +15,13 @@ createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <BrowserRouter>
         <AuthProvider>
-          <RequestsProvider>
-            <UploadProvider>
-              <App />
-            </UploadProvider>
-          </RequestsProvider>
+          <NotificationsProvider>
+            <RequestsProvider>
+              <UploadProvider>
+                <App />
+              </UploadProvider>
+            </RequestsProvider>
+          </NotificationsProvider>
         </AuthProvider>
       </BrowserRouter>
     </HelmetProvider>
