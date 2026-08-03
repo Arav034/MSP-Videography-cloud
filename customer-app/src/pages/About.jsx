@@ -20,7 +20,7 @@ export default function About() {
       <section className="max-w-4xl mx-auto px-6 md:px-10 pt-24 pb-16 text-center">
         <span className="eyebrow mb-6">Our Story</span>
         <h1 className="font-display text-5xl md:text-6xl leading-tight">
-          Built on patience, precision, and light.
+          Built by patience, precision, and light.
         </h1>
       </section>
 
