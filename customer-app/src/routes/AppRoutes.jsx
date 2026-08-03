@@ -10,6 +10,7 @@ const About = lazy(() => import("@/pages/About"));
 const Portfolio = lazy(() => import("@/pages/Portfolio"));
 const ServicesPage = lazy(() => import("@/pages/services"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const FAQ = lazy(() => import("@/pages/FAQ"));
 const Login = lazy(() => import("@/pages/Login"));
 const ServiceRequest = lazy(() => import("@/pages/ServiceRequest"));
 const Book = lazy(() => import("@/pages/Book"));
@@ -31,6 +32,7 @@ export default function AppRoutes() {
           <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
           <Route path={ROUTES.SERVICES} element={<ServicesPage />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.FAQ} element={<FAQ />} />
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.SERVICE_REQUEST} element={<ServiceRequest />} />
           <Route path={ROUTES.BOOK} element={<Book />} />
