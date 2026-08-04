@@ -5,7 +5,7 @@ import FeaturedWork from "@/pages/home/FeaturedWork";
 import Services from "@/pages/home/Services";
 import Process from "@/pages/home/Process";
 import Testimonials from "@/pages/home/Testimonials";
-import FAQTeaser from "@/pages/home/FAQTeaser";
+// import FAQTeaser from "@/pages/home/FAQTeaser";
 import ClosingCta from "@/pages/home/ClosingCta";
 import UrgencyBanner from "@/components/sections/UrgencyBanner";
 import TrustBar from "@/components/sections/TrustBar";
@@ -62,9 +62,9 @@ export default function Home() {
         <Testimonials />
       </Reveal>
 
-      <Reveal>
+      {/* <Reveal>
         <FAQTeaser />
-      </Reveal>
+      </Reveal> */}
 
       <Reveal>
         <ClosingCta />

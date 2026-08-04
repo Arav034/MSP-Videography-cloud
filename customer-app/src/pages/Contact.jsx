@@ -3,7 +3,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import SEO from "@/components/common/SEO";
 
 const CONTACT_INFO = [
-  { icon: Mail, label: "Email", value: "hello@lumenstudio.com" },
+  { icon: Mail, label: "Email", value: "hello@mspvideography.com" },
   { icon: Phone, label: "Phone", value: "+1 (555) 010-2024" },
   { icon: MapPin, label: "Studio", value: "24 Harbor Lane, Chennai, TN" },
   { icon: Clock, label: "Hours", value: "Mon–Sat, 9:00 AM – 6:00 PM" },
