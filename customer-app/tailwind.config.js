@@ -18,7 +18,7 @@ export default {
         steel: "#5B7186",
       },
       fontFamily: {
-        display: ["'Cormorant Garamond'", "serif"],
+        display: ["'Poppins'", "sans-serif"],
         body: ["'Hanken Grotesk'", "sans-serif"],
         mono: ["'IBM Plex Mono'", "monospace"],
       },
