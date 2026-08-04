@@ -18,9 +18,10 @@ export default {
         steel: "#5B7186",
       },
       fontFamily: {
-        display: ["'Poppins'", "sans-serif"],
+        display: ["'Cormorant Garamond'", "serif"],
         body: ["'Hanken Grotesk'", "sans-serif"],
         mono: ["'IBM Plex Mono'", "monospace"],
+        nav: ["'Poppins'", "sans-serif"],
       },
       letterSpacing: {
         wideish: "0.08em",

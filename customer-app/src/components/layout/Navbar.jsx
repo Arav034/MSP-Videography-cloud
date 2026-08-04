@@ -12,8 +12,8 @@ export default function Navbar() {
             to={item.to}
             end
             className={({ isActive }) =>
-              cn("nav-link block px-3 py-1", isActive && "nav-link-active")
-            }
+                cn("nav-link font-nav block px-3 py-1", isActive && "nav-link-active")
+              }
           >
             {item.label}
           </NavLink>
