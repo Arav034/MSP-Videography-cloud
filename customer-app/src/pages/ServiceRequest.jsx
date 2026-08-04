@@ -7,6 +7,12 @@ import Spinner from "@/components/common/Spinner";
 import { useUpload } from "@/hooks/useUpload";
 import { useRequests } from "@/hooks/useRequests";
 import { BOOKING_SERVICE_OPTIONS } from "@/constants/bookingContent";
+
+// This form is reached via the "Upload for Editing" flow, so only show
+// Editing-category services rather than the full service catalog.
+const EDITING_SERVICE_OPTIONS = BOOKING_SERVICE_OPTIONS.filter(
+  (opt) => opt.category === "Editing"
+);
 import { ROUTES } from "@/constants/routes";
 
 const BUDGET_RANGES = ["Under ₹5,000", "₹5,000 – ₹15,000", "₹15,000 – ₹40,000", "₹40,000+"];
@@ -132,9 +138,9 @@ const handleSubmit = (e) => {
             <option value="" disabled>
               Select a service
             </option>
-            {BOOKING_SERVICE_OPTIONS.map((opt) => (
+            {EDITING_SERVICE_OPTIONS.map((opt) => (
               <option key={opt.title} value={opt.title}>
-                {opt.title} — {opt.category}
+                {opt.title}
               </option>
             ))}
           </select>

@@ -14,7 +14,15 @@ export const SERVICE_CATEGORIES = [
     img: "https://picsum.photos/seed/lumen-editing/700/850",
     items: [
       {
-        title: "Photo & Video Editing",
+        title: "Documentary Video Editing",
+        desc: "Color grading, retouching, and post-production for photo and film delivery."},
+        {
+        title: "Product Based Video Editing",
+        desc: "Color grading, retouching, and post-production for photo and film delivery."},
+        {
+        title: "Vlog Video Editing",
+        desc: "Color grading, retouching, and post-production for photo and film delivery."},
+       { title: "Photo Editing",
         desc: "Color grading, retouching, and post-production for photo and film delivery.",
       },
     ],
