@@ -25,9 +25,18 @@ If you are developing a production application, we recommend using TypeScript wi
 
 Future upgrage:
   1. Profile route commanded -> src/constants/navcontent.js 
-       // { label: "Profile", to: ROUTES.LOGIN },
+       <!-- { label: "Profile", to: ROUTES.LOGIN }, -->
+       
   2. Book a session -> view my booking hiding and change route to back to home.
       <!-- <Link to={ROUTES.HOME} className="btn-primary">
         Back To Home
       </Link> -->
-  
+      
+  3. Pageloader images turn off temporarily 
+      <!-- <>
+      {/* {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
+      <ScrollToTop />
+      <AppRoutes />
+      <ScrollToTopButton /> */}
+      <AppRoutes />
+      </> -->

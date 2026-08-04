@@ -5,7 +5,7 @@ import ScrollToTopButton from "@/components/common/ScrollToTopButton";
 import SplashScreen from "@/components/common/SplashScreen";
 
 export default function App() {
-  // const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   return (
     <>
