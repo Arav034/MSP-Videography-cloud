@@ -7,10 +7,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-frost text-ink font-body antialiased;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 {

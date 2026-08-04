@@ -31,7 +31,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="md:hidden relative w-6 h-6 flex flex-col items-center justify-center gap-[5px]"
+            className="md:hidden flex flex-col items-center justify-center gap-[5px] w-10 h-10 shrink-0 self-center"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
