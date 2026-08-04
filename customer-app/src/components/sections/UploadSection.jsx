@@ -52,9 +52,9 @@ export default function UploadSection() {
 
         {step === STEPS.MAIN && (
           <div className="mt-10">
-            <div className="bg-white p-1 shadow-sm">
-              <Dropzone onFiles={addFiles} accept="image/*,video/*" />
-            </div>
+            <div className="mt-10 shadow-sm">
+          <Dropzone onFiles={addFiles} accept="image/*,video/*" />
+        </div>
 
             {files.length > 0 && (
               <div className="mt-8">

@@ -28,20 +28,20 @@ export default function Dropzone({ onFiles, accept = "image/*,video/*", label, h
       onClick={() => inputRef.current?.click()}
       className={cn(
         "border-2 border-dashed px-6 py-14 flex flex-col items-center justify-center text-center cursor-pointer",
-        "transition-colors duration-300",
-        dragging ? "border-brand bg-brand/5" : "border-mist bg-white hover:border-brand/50"
+        "transition-colors duration-300 bg-[#12294a]",
+        dragging ? "border-brand-light bg-[#173562]" : "border-brand-light/30 hover:border-brand-light/60"
       )}
     >
       <UploadCloud
         size={32}
         strokeWidth={1.5}
-        className={cn("mb-4", dragging ? "text-brand" : "text-steel")}
+        className={cn("mb-4", dragging ? "text-brand-light" : "text-brand-light/70")}
       />
-     <p className="font-display text-lg text-ink mb-1">
+      <p className="font-display text-lg text-frost mb-1">
         {label ?? "Drag & drop your photos or videos"}
       </p>
-      <p className="text-sm text-steel mb-4">or click to browse from your device</p>
-      <span className="font-mono text-[11px] tracking-widest2 uppercase text-steel/70">
+      <p className="text-sm text-frost/60 mb-4">or click to browse from your device</p>
+      <span className="font-mono text-[11px] tracking-widest2 uppercase text-brand-light/60">
         {hint ?? "Images & Videos Accepted"}
       </span>
       
