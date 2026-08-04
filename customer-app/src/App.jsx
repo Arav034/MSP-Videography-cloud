@@ -9,11 +9,10 @@ export default function App() {
 
   return (
     <>
-      {/* {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
+      {/* {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />} */}
       <ScrollToTop />
       <AppRoutes />
-      <ScrollToTopButton /> */}
-      <AppRoutes />
+      <ScrollToTopButton />
     </>
   );
 }
