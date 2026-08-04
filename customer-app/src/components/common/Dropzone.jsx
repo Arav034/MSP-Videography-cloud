@@ -41,7 +41,7 @@ export default function Dropzone({ onFiles, accept = "image/*,video/*", label, h
         {label ?? "Drag & drop your photos or videos"}
       </p>
       <p className="text-sm text-frost/60 mb-4">or click to browse from your device</p>
-      <span className="font-mono text-[11px] tracking-widest2 uppercase text-brand-light/60">
+      <span className="font-mono text-[11px] tracking-widest2 uppercase text-white">
         {hint ?? "Images & Videos Accepted"}
       </span>
       
