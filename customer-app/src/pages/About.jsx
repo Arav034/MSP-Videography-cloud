@@ -80,7 +80,7 @@ export default function About() {
 
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-20">
         <SectionHeading eyebrow="Behind The Lens" title="Meet the Team" align="center" />
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {STUDIO_TEAM.map((member) => (
             <TeamCard key={member.name} {...member} />
           ))}

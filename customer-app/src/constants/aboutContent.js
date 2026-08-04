@@ -32,23 +32,18 @@ export const STUDIO_STATS = [
 
 export const STUDIO_TEAM = [
   {
-    name: "Aravinth Kumar",
+    name: "Navin",
     role: "Founder & Lead Photographer",
     img: "https://picsum.photos/seed/team1/500/600",
   },
   {
-    name: "Meera Raghavan",
+    name: "Aravinth",
     role: "Creative Director",
     img: "https://picsum.photos/seed/team2/500/600",
   },
   {
-    name: "Karthik Iyer",
-    role: "Lead Videographer",
+    name: "Madhumitha",
+    role: "Social Media & Marketing",
     img: "https://picsum.photos/seed/team3/500/600",
-  },
-  {
-    name: "Divya Shankar",
-    role: "Editing & Post-Production",
-    img: "https://picsum.photos/seed/team4/500/600",
   },
 ];
