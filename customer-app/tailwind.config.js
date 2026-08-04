@@ -19,7 +19,7 @@ export default {
       },
       fontFamily: {
         display: ["'Cormorant Garamond'", "serif"],
-        body: ["'Inter'", "sans-serif"],
+        body: ["'Hanken Grotesk'", "sans-serif"],
         mono: ["'IBM Plex Mono'", "monospace"],
       },
       letterSpacing: {

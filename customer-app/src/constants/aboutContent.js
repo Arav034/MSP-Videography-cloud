@@ -24,10 +24,10 @@ export const STUDIO_VALUES = [
 ];
 
 export const STUDIO_STATS = [
-  { value: "9+", label: "Years in Practice" },
-  { value: "420+", label: "Sessions Delivered" },
-  { value: "150+", label: "Weddings Captured" },
-  { value: "12", label: "Industry Awards" },
+  { value: "40+", label: "Years in Practice" },
+  { value: "920+", label: "Sessions Delivered" },
+  { value: "1500+", label: "Weddings Captured" },
+  { value: "12+", label: "Industry Awards" },
 ];
 
 export const STUDIO_TEAM = [
