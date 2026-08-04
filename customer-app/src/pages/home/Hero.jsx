@@ -25,7 +25,7 @@ export default function Hero() {
           <h1 className="font-display text-5xl md:text-7xl leading-tight max-w-3xl text-frost">
             Editing is the..
             <br />
-            heart beat of story telling
+            Heart Beat of Story Telling
           </h1>
         </FocusFrame>
 
