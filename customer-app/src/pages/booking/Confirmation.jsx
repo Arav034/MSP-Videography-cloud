@@ -19,8 +19,8 @@ export default function Confirmation({ service, total }) {
           Total: <span className="text-ink font-medium">₹{total.toFixed(2)}</span>
         </p>
       )}
-      <Link to={ROUTES.DASHBOARD_BOOKINGS} className="btn-primary">
-        View My Bookings
+      <Link to={ROUTES.HOME} className="btn-primary">
+        Back To Home
       </Link>
     </div>
   );
