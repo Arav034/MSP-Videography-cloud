@@ -30,7 +30,7 @@ export default function Hero() {
         </FocusFrame>
 
         <p className="mt-8 text-frost/70 max-w-md">
-          Let's compose your Next Story. We are a team of passionate storytellers, dedicated to capturing the essence of your vision and bringing it to life through our lens. 
+          Let's compose your Next Story.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
