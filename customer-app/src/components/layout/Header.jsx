@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-frost/90 backdrop-blur border-b border-mist">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-frost/90 backdrop-blur-md border-b border-mist shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
           {/* Logo */}
           <FocusFrame padding="p-1">
