@@ -46,9 +46,9 @@ export default function Home() {
         <FeaturedWork />
       </Reveal>
 
-      <Reveal>
+      {/* <Reveal>
         <InstagramStrip />
-      </Reveal>
+      </Reveal> */}
 
       <Reveal>
         <Services />
