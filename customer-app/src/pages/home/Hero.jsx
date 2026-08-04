@@ -23,15 +23,14 @@ export default function Hero() {
 
         <FocusFrame padding="p-4">
           <h1 className="font-display text-5xl md:text-7xl leading-tight max-w-3xl text-frost">
-            Every frame,
+            Editing is the..
             <br />
-            composed with intention.
+            heart beat of story telling
           </h1>
         </FocusFrame>
 
         <p className="mt-8 text-frost/70 max-w-md">
-          A photography and film studio for people and brands who want their
-          story told with precision, not haste.
+          Let's compose your Next Story. We are a team of passionate storytellers, dedicated to capturing the essence of your vision and bringing it to life through our lens. 
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
