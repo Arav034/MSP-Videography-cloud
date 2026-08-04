@@ -6,19 +6,21 @@ import { FEATURED_WORK } from "@/constants/homeContent";
 import { ROUTES } from "@/constants/routes";
 
 export default function FeaturedWork() {
+  const displayedWork = FEATURED_WORK.slice(0, 4);
+
   return (
     <section className="max-w-7xl mx-auto px-6 md:px-10 py-20">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
         <SectionHeading eyebrow="Selected Work" title="Recent frames" />
         <FocusFrame padding="p-1">
           <Link to={ROUTES.PORTFOLIO} className="nav-link">
-             View full portfolio →
+            View full portfolio →
           </Link>
         </FocusFrame>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-        {FEATURED_WORK.map((item) => (
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {displayedWork.map((item) => (
           <WorkCard key={item.id} {...item} />
         ))}
       </div>
