@@ -23,9 +23,7 @@ export default function Hero() {
 
         <FocusFrame padding="p-4">
           <h1 className="font-display text-5xl md:text-7xl leading-tight max-w-3xl text-frost">
-            Editing is the..
-            <br />
-            Heart Beat of Story Telling
+            Cut. Shape. Inspire
           </h1>
         </FocusFrame>
 
