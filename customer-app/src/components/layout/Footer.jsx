@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between font-mono text-xs text-frost/50">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-1 flex items-center justify-between font-mono text-xs text-frost/50">
           <span>© {new Date().getFullYear()} MSP VIDEOGRAPHY</span>
           <span>BUILT BY ARAVINTH</span>
         </div>
