@@ -103,7 +103,7 @@ export default function MobileMenu({ open, onClose }) {
         <div
           style={{ transitionDelay: open ? "80ms" : "0ms" }}
           className={cn(
-            "shrink-0 p-4 pb-6 border-t border-mist transition-all duration-300 ease-frame",
+            "shrink-0 p-4 pb-8 border-t border-mist transition-all duration-300 ease-frame",
             open
               ? "translate-x-0 opacity-100"
               : "translate-x-8 opacity-0"
