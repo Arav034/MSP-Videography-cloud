@@ -11,7 +11,7 @@ export default function Services() {
           From candid family sessions to full broadcast production — explore
           what we offer by category.
         </p>
-
+        <br />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {SERVICE_CATEGORIES.map((cat) => (
             <ServiceCategoryCard key={cat.id} {...cat} />
