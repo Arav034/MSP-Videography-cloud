@@ -12,7 +12,8 @@ export default function Services() {
           what we offer by category.
         </p>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="mt-12 grid grid-cols-4
+        sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SERVICE_CATEGORIES.map((cat) => (
             <ServiceCategoryCard key={cat.id} {...cat} />
           ))}
