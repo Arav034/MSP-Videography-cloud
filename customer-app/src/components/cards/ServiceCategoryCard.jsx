@@ -40,7 +40,7 @@ export default function ServiceCategoryCard({ id, label, count, icon: Icon, img 
           />
 
           <div className="absolute bottom-0 left-0 right-0 p-5">
-            <h3 className="font-display text-2xl text-white mb-1">{label}</h3>
+            <h3 className="font-display text-lg text-white mb-1">{label}</h3>
             <p className="font-mono text-xs tracking-wideish uppercase text-white/70">
               {count} {count === 1 ? "Service" : "Services"}
             </p>
