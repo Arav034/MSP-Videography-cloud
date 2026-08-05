@@ -52,9 +52,20 @@ export default function UploadSection() {
 
         {step === STEPS.MAIN && (
           <div className="mt-10">
-            <div className="mt-10 shadow-sm">
+            {/* <div className="mt-10 shadow-sm">
           <Dropzone onFiles={addFiles} accept="image/*,video/*" />
-        </div>
+        </div> */}
+            <div className="shadow-sm">
+              <Dropzone
+                onFiles={addFiles}
+                accept="video/mp4,video/quicktime,.mxf,.braw,.r3d,image/*"
+                label="Drag and drop raw footage files here"
+                description="Or click below to browse files from your computer."
+                buttonLabel="Select Footage File"
+                formats={["MP4", "MOV", "MXF", "JPG", "PNG", "TIFF"]}
+                sizeLimit="4K / 8K RAW · Up to 10GB"
+              />
+            </div>
 
             {files.length > 0 && (
               <div className="mt-8">

@@ -2,7 +2,16 @@ import { useState, useRef } from "react";
 import { UploadCloud } from "lucide-react";
 import { cn } from "@/utils/cn";
 
-export default function Dropzone({ onFiles, accept = "image/*,video/*", label, hint }) {
+export default function Dropzone({
+  onFiles,
+  accept = "image/*,video/*",
+  label,
+  hint,
+  description,
+  buttonLabel,
+  formats,
+  sizeLimit,
+}) {
   const [dragging, setDragging] = useState(false);
   const inputRef = useRef(null);
 
@@ -25,38 +34,66 @@ export default function Dropzone({ onFiles, accept = "image/*,video/*", label, h
       }}
       onDragLeave={() => setDragging(false)}
       onDrop={handleDrop}
-      onClick={() => inputRef.current?.click()}
       className={cn(
-        "border-2 border-dotted border-white px-6 py-14 flex flex-col items-center justify-center text-center cursor-pointer",
-        "transition-all duration-300",
-        dragging
-          ? "bg-[#173562] shadow-[0_0_35px_8px_rgba(59,130,246,0.45)]"
-          : "bg-[#12294a] shadow-[0_0_25px_2px_rgba(59,130,246,0.2)]"
+        "p-2 transition-colors duration-300",
+        dragging && "brightness-95"
       )}
+      style={{
+        backgroundImage: "linear-gradient(to bottom, #16406B 0%, #ffffff 100%)",
+      }}
     >
-      <UploadCloud
-        size={32}
-        strokeWidth={1.5}
-        className={cn("mb-4", dragging ? "text-brand-light" : "text-brand-light/70")}
-      />
-      <p className="font-display text-lg text-frost mb-1">
-        {label ?? "Drag & drop your photos or videos"}
-      </p>
-      <p className="text-sm text-frost/60 mb-4">or click to browse from your device</p>
-      <span className="font-mono text-[11px] tracking-widest2 uppercase text-white">
-        {hint ?? "Images & Videos Accepted"}
-      </span>
-      
-      
-      
-      <input
-        ref={inputRef}
-        type="file"
-        multiple
-        accept={accept}
-        onChange={handleChange}
-        className="hidden"
-      />
+      <div className="border-2 border-dotted border-brand px-6 py-12 flex flex-col items-center justify-center text-center">
+        <UploadCloud
+          size={32}
+          strokeWidth={1.5}
+          className="mb-4 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
+        />
+
+        <p className="font-display text-lg text-white mb-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+          {label ?? "Drag & drop your photos or videos"}
+        </p>
+
+        {description && (
+          <p className="text-sm text-white/90 mb-5 max-w-sm drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+            {description}
+          </p>
+        )}
+
+        <button
+          type="button"
+          onClick={() => inputRef.current?.click()}
+          className="btn-primary mb-5"
+        >
+          {buttonLabel ?? "Select File"}
+        </button>
+
+        {formats && formats.length > 0 && (
+          <p className="font-mono text-[11px] tracking-wideish text-brand-light mb-1">
+            {formats.map((f) => `.${f}`).join("  ")}
+          </p>
+        )}
+
+        {sizeLimit && (
+          <span className="font-mono text-[11px] tracking-widest2 uppercase text-brand-light">
+            {sizeLimit}
+          </span>
+        )}
+
+        {!formats && (
+          <span className="font-mono text-[11px] tracking-widest2 uppercase text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+            {hint ?? "Images & Videos Accepted"}
+          </span>
+        )}
+
+        <input
+          ref={inputRef}
+          type="file"
+          multiple
+          accept={accept}
+          onChange={handleChange}
+          className="hidden"
+        />
+      </div>
     </div>
   );
 }
