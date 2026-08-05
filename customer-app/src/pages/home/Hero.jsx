@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://picsum.photos/seed/lumenhero/1600/1000"
+          src="public/timeline.png"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -18,7 +18,9 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-32 md:py-52 flex flex-col items-center text-center">
         <span className="eyebrow mb-6 text-frost/70">
-          Portraits · Weddings · Commercial · Film
+          <h1 className="font-display text-xl md:text-2xl text-frost">
+            Portraits · Weddings · Commercial · Film
+          </h1>
         </span>
 
         <FocusFrame padding="p-4">
