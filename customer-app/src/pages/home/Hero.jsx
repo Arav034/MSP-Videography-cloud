@@ -5,13 +5,22 @@ import FocusFrame from "@/components/ui/FocusFrame";
 import { ROUTES } from "@/constants/routes";
 
 export default function Hero() {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setOffset(window.scrollY * 0.3);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="public/timeline.png"
+          src="/Timeline.png"
           alt=""
-          className="w-full h-full object-cover"
+          style={{ transform: `translateY(${offset}px)`, filter: "blur(1px)" }}
+          className="w-full h-[130%] object-cover will-change-transform scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
       </div>
@@ -58,7 +67,7 @@ export default function Hero() {
         onClick={() =>
           document.getElementById("upload-section")?.scrollIntoView({ behavior: "smooth" })
         }
-       className="absolute top-6 md:top-10 right-6 z-10 flex items-center gap-2 bg-white/10 backdrop-blur-sm
+        className="absolute top-6 md:top-10 right-6 z-10 flex items-center gap-2 bg-white/10 backdrop-blur-sm
                    border border-white/20 text-frost pl-3 pr-4 py-2.5 text-xs font-mono tracking-wideish uppercase
                    hover:bg-white/20 hover:border-white/30 transition-colors duration-300 animate-bounce-slow"
       >
