@@ -53,11 +53,16 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
         },
+        glowBlink: {
+          "0%, 100%": { boxShadow: "0 0 8px 1px rgba(59,130,246,0.15)" },
+          "50%": { boxShadow: "0 0 35px 10px rgba(59,130,246,0.55)" },
+        },
       },
       animation: {
         "splash-in": "splashIn 900ms cubic-bezier(0.4,0,0.2,1) both",
         "pulse-glow": "pulseGlow 2.4s ease-in-out infinite",
         "bounce-slow": "bounceSlow 2s ease-in-out infinite",
+        "glow-blink": "glowBlink 2s ease-in-out infinite",
       },
     },
   },

@@ -27,9 +27,11 @@ export default function Dropzone({ onFiles, accept = "image/*,video/*", label, h
       onDrop={handleDrop}
       onClick={() => inputRef.current?.click()}
       className={cn(
-        "border-2 border-dotted border-white px-10 py-16 flex flex-col items-center justify-center text-center cursor-pointer",
-        "transition-colors duration-300",
-        dragging ? "bg-[#173562]" : "bg-[#12294a]"
+        "border-2 border-dotted border-white px-6 py-14 flex flex-col items-center justify-center text-center cursor-pointer",
+        "transition-all duration-300",
+        dragging
+          ? "bg-[#173562] shadow-[0_0_35px_8px_rgba(59,130,246,0.45)]"
+          : "bg-[#12294a] shadow-[0_0_25px_2px_rgba(59,130,246,0.2)]"
       )}
     >
       <UploadCloud
