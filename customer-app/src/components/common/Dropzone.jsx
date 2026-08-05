@@ -35,7 +35,7 @@ export default function Dropzone({
       onDragLeave={() => setDragging(false)}
       onDrop={handleDrop}
       className={cn(
-        "p-2 transition-colors duration-300",
+        "p-2 transition-colors duration-300 animate-glow-blink",
         dragging && "brightness-95"
       )}
       style={{
