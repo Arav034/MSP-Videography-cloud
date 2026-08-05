@@ -13,7 +13,7 @@ export default function UrgencyBanner() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 flex items-center justify-center gap-3 text-sm relative">
         <Flame size={16} className="shrink-0 text-amber-300" />
         <span className="font-mono tracking-wideish text-xs md:text-sm text-center">
-          Only a few booking slots left this month —{" "}
+          we are booking 5 slots a month —{" "}
           <Link to={ROUTES.BOOK} className="underline underline-offset-2 hover:text-amber-200">
             reserve yours today
           </Link>
