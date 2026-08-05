@@ -10,6 +10,9 @@ import { RequestsProvider } from "@/context/RequestsContext";
 import { NotificationsProvider } from "@/context/NotificationsContext";
 import "@/index.css";
 
+
+import "@/services/supabase/supabaseClient";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
