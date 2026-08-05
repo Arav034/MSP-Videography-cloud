@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-52 md:py-52 flex flex-col items-center text-center">
+      <div className="relative max-w-xl mx-auto px-6 md:px-10 py-52 md:py-52 flex flex-col items-center text-center">
         <span className="eyebrow mb-6 text-frost/70">
           <p className="font-display text-l md:text-l text-frost">
             Portraits · Weddings · Commercial · Film
