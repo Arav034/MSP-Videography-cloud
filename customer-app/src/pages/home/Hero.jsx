@@ -17,9 +17,9 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/Timeline.png"
+          src="/timeline2.png"
           alt=""
-          style={{ transform: `translateY(${offset}px)`, filter: "blur(1px)" }}
+          style={{ transform: `translateY(${offset}px)`, filter: "blur(2px)" }}
           className="w-full h-[100%] object-cover will-change-transform scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
