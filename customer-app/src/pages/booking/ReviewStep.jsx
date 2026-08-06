@@ -1,7 +1,15 @@
 import { useState, useMemo } from "react";
 import CouponInput from "@/components/forms/CouponInput";
 
-export default function ReviewStep({ service, date, time, details, onConfirm, onBack }) {
+export default function ReviewStep({
+  service,
+  date,
+  time,
+  details,
+  onConfirm,
+  onBack,
+  submitting
+}) {
   const [coupon, setCoupon] = useState(null);
 
   const formattedDate = date
@@ -58,8 +66,13 @@ export default function ReviewStep({ service, date, time, details, onConfirm, on
         <button type="button" onClick={onBack} className="btn-ghost">
           Back
         </button>
-        <button type="button" onClick={() => onConfirm({ total, coupon })} className="btn-primary">
-          Confirm Booking
+       <button
+          type="button"
+          onClick={() => onConfirm({ total, coupon })}
+          className="btn-primary"
+          disabled={submitting}
+        >
+          {submitting ? "Submitting..." : "Confirm Booking"}
         </button>
       </div>
     </div>

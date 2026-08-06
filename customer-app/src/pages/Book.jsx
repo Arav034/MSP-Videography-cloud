@@ -7,6 +7,7 @@ import ReviewStep from "@/pages/booking/ReviewStep";
 import Confirmation from "@/pages/booking/Confirmation";
 import { useMultiStepForm } from "@/hooks/useMultiStepForm";
 import SEO from "@/components/common/SEO";
+import { createBooking } from "@/services/bookingService";
 
 const STEP_LABELS = ["Service", "Date & Time", "Details", "Review"];
 
@@ -22,12 +23,60 @@ export default function Book() {
 
 const [bookingTotal, setBookingTotal] = useState(null);
 
-  const handleConfirm = ({ total, coupon }) => {
-    // No backend wired yet — UI-only per project rules.
-    console.log("Booking submitted:", { service, date, time, details, total, coupon });
+const handleConfirm = async ({ total, coupon }) => {
+  try {
+    setSubmitting(true);
+
+    const bookingNumber = `MSP${Date.now()}`;
+
+    const bookingData = {
+      booking_number: bookingNumber,
+
+      service: service?.title,
+      category: service?.category,
+
+      booking_date: date,
+      booking_time: time,
+
+      customer_name: details.name,
+      email: details.email,
+      phone: details.phone,
+      notes: details.notes,
+
+      coupon_code: coupon?.code ?? null,
+
+      subtotal: service?.price ?? 0,
+      discount: coupon
+        ? coupon.type === "percent"
+          ? Math.round((service.price * coupon.value) / 100)
+          : coupon.value
+        : 0,
+
+      total_amount: total,
+
+      payment_status: "Pending",
+      booking_status: "Pending",
+      upload_status: "Waiting",
+
+      admin_notes: null,
+    };
+
+    // console.log("Booking Data:", bookingData);
+
+    
+    const savedBooking = await createBooking(bookingData);
+
+    console.log(savedBooking);
+
     setBookingTotal(total);
     setSubmitted(true);
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Failed to submit booking.");
+  } finally {
+    setSubmitting(false);
+  }
+};
   
 
 if (submitted) {
