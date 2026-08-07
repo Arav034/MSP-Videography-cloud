@@ -29,13 +29,13 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-64 md:py-64 flex flex-col items-center text-center">
         <span className="eyebrow mb-6 text-frost/70">
-          <p className="font-display text-l md:text-l text-frost">
+          <p className="font-display text-1xl md:text-2xl text-frost">
             Portraits · Weddings · Commercial · Film
           </p>
         </span>
 
         <FocusFrame padding="p-4">
-          <p className="font-display text-6xl md:text-7xl leading-tight max-w-3xl text-frost">
+          <p className="font-display text-6xl md:text-8xl leading-tight max-w-3xl text-frost">
             Cut. Shape. Inspire.
           </p>
         </FocusFrame>
