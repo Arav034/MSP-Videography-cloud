@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import TextField from "@/components/forms/TextField";
 import TextArea from "@/components/forms/TextArea";
 import Spinner from "@/components/common/Spinner";
+import { createContact } from "@/services/contactform";
 
 const INITIAL_STATE = { name: "", email: "", subject: "", message: "" };
 
@@ -15,18 +16,48 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setSubmitting(true);
+  //   // No backend wired yet — simulated delay to demonstrate the loading state.
+  //   setTimeout(() => {
+  //     console.log("Contact form submitted:", form);
+  //     setSubmitting(false);
+  //     setSubmitted(true);
+  //     setForm(INITIAL_STATE);
+  //   }, 900);
+  // };
+
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
-    // No backend wired yet — simulated delay to demonstrate the loading state.
-    setTimeout(() => {
-      console.log("Contact form submitted:", form);
-      setSubmitting(false);
+
+    try {
+      setSubmitting(true);
+
+      const contactData = {
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+        status: "New",
+        admin_notes: null,
+      };
+
+      console.log("Contact Data:", contactData);
+
+      await createContact(contactData);
+
       setSubmitted(true);
       setForm(INITIAL_STATE);
-    }, 900);
+    } catch (error) {
+      console.error("Contact submission failed:", error);
+      alert("Failed to send your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
-
+  
   if (submitted) {
     return (
       <div className="border border-mist bg-white p-10 flex flex-col items-center text-center">
