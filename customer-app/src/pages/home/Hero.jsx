@@ -35,7 +35,7 @@ export default function Hero() {
         </span>
 
         <FocusFrame padding="p-4">
-          <p className="font-display text-6xl md:text-8xl leading-tight max-w-3xl text-frost">
+          <p className="font-display text-5xl md:text-8xl leading-tight max-w-3xl text-frost">
             Cut. Shape. Inspire.
           </p>
         </FocusFrame>
