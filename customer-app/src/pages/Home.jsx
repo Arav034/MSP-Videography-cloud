@@ -58,9 +58,9 @@ export default function Home() {
         <Process />
       </Reveal>
 
-      <Reveal>
+      {/* <Reveal>
         <Testimonials />
-      </Reveal>
+      </Reveal> */}
 
       {/* <Reveal>
         <FAQTeaser />
