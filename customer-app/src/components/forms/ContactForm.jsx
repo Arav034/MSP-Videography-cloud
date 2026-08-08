@@ -90,23 +90,29 @@ export default function ContactForm() {
       </div>
       <div>
         <TextField
-        label="Phone"
-        name="phone"
-        type="number"
-        value={form.phone}
-        onChange={handleChange}
-        placeholder="+91 98765 43210"
-        required />
-        
-        {form.phone && form.phone.replace(/\D/g, "").length < 10 && (
-        <p className="mt-2 text-xs text-red-500">
-          Please enter your full 10-digit phone number.
-        </p>
-       )}
+          label="Phone"
+          name="phone"
+          type="number"
+          value={form.phone}
+          onChange={handleChange}
+          placeholder="+91 98765 43210"
+          required />
+          
+          {form.phone && form.phone.replace(/\D/g, "").length < 10 && (
+          <p className="mt-2 text-xs text-red-500">
+            Please enter your full 10-digit phone number.
+          </p>
+        )}
+      
+          {form.phone && form.phone.replace(/\D/g, "").length > 10 && (
+          <p className="mt-2 text-xs text-red-500">
+            Phone number cannot be more than 10 digits.
+          </p>
+      )}
       </div>
       
       <TextField label="Subject" name="subject" value={form.subject} onChange={handleChange} required />
-      <TextArea label="Message" name="message" rows={6} value={form.message} onChange={handleChange} required />
+      <TextArea label="Message" name="message" rows={6} value={form.message} onChange={handleChange} />
 
      <button
         type="submit"
