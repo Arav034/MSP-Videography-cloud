@@ -308,6 +308,7 @@ export default function UploadSection() {
         eyebrow="Start a Project"
         title="Upload for Editing"
         align="center"
+        light
       />
 
       <p className="mt-4 text-white/90 text-center max-w-lg mx-auto">
