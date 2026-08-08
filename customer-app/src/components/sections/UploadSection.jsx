@@ -249,25 +249,6 @@
 // }
 
 
-
-// // max-w-4xl mx-auto px-6 md:px-10 py-20 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Mic, X, FileImage, FileVideo, Play, Check, ArrowLeft } from "lucide-react";
@@ -527,7 +508,3 @@ export default function UploadSection() {
     </section>
   );
 }
-
-
-
-// max-w-4xl mx-auto px-6 md:px-10 py-20 3
