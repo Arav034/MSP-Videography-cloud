@@ -3,7 +3,12 @@ import { cn } from "@/utils/cn";
 import { TIME_SLOTS, getUnavailableSlots } from "@/constants/bookingContent";
 
 export default function DateTimeStep({ date, time, onChangeDate, onChangeTime, onNext, onBack }) {
-  const today = new Date().toISOString().split("T")[0];
+  // const today = new Date().toISOString().split("T")[0];
+  
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+const minDate = tomorrow.toISOString().split("T")[0];
 
   const unavailableSlots = useMemo(() => getUnavailableSlots(date), [date]);
 
@@ -26,7 +31,10 @@ export default function DateTimeStep({ date, time, onChangeDate, onChangeTime, o
           </span>
           <input
             type="date"
-            min={today}
+            
+            // min={today}
+            min={minDate}
+            
             value={date}
             onChange={(e) => onChangeDate(e.target.value)}
             style={{ colorScheme: "light" }}

@@ -21,7 +21,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-
+My Notes:
 
 Future upgrage:
   1. Profile route commanded -> src/constants/navcontent.js 
@@ -46,3 +46,14 @@ Future upgrage:
      <!-- <header className="fixed top-0 left-0 right-0 z-50 bg-frost/90 backdrop-blur-md border-b border-mist shadow-sm transition-all duration-300"> -->
      after,
      <!-- <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg"> -->
+     
+  5. src/pages/booking/setdatetime
+     before,
+     <!-- const today = new Date().toISOString().split("T")[0];
+     min={today} -->
+     after,
+      <!-- const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+
+      const minDate = tomorrow.toISOString().split("T")[0];
+      min={minDate} -->
