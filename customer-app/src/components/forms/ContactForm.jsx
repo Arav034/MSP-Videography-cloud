@@ -112,7 +112,7 @@ export default function ContactForm() {
       </div>
       
       <TextField label="Subject" name="subject" value={form.subject} onChange={handleChange} required />
-      <TextArea label="Message" name="message" rows={6} value={form.message} onChange={handleChange} />
+      <TextArea label="Message (optional)" name="message" rows={6} value={form.message} onChange={handleChange} />
 
      <button
         type="submit"

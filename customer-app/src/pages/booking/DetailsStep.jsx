@@ -7,6 +7,8 @@ export default function DetailsStep({ details, onChange, onNext, onBack }) {
   };
 
   const isValid = details.name && details.email && details.phone;
+  
+  const isPhoneValid = details.phone && details.phone.replace(/\D/g, "").length === 10;
 
   return (
     <div>
@@ -16,7 +18,22 @@ export default function DetailsStep({ details, onChange, onNext, onBack }) {
       <form className="max-w-md mx-auto flex flex-col gap-6">
         <TextField label="Full Name" name="name" value={details.name} onChange={handleField} required />
         <TextField label="Email" name="email" type="email" value={details.email} onChange={handleField} required/>
-        <TextField label="Phone" name="phone" type="number" value={details.phone} onChange={handleField} required />
+        <div>
+          <TextField label="Phone" name="phone" type="number" value={details.phone} onChange={handleField} required />
+          
+          {details.phone && details.phone.replace(/\D/g, "").length < 10 && (
+          <p className="mt-2 text-xs text-red-500">
+            Please enter your full 10-digit phone number.
+          </p>
+         )}
+      
+          {details.phone && details.phone.replace(/\D/g, "").length > 10 && (
+          <p className="mt-2 text-xs text-red-500">
+            Phone number cannot be more than 10 digits.
+          </p>
+         )}
+        </div>
+      
         <TextArea label="Notes (optional)" name="notes" value={details.notes} onChange={handleField} />
       </form>
 
@@ -26,7 +43,7 @@ export default function DetailsStep({ details, onChange, onNext, onBack }) {
         </button>
         <button
           type="button"
-          disabled={!isValid}
+          disabled={!isValid || !isPhoneValid}
           onClick={onNext}
           className="btn-primary disabled:opacity-40 disabled:cursor-not-allowed"
         >
