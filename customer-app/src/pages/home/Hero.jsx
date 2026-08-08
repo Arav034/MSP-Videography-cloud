@@ -17,7 +17,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/timeline2.png"
+          src="/images/timeline2.png"
           alt=""
           style={{ transform: `translateY(${offset}px)`, filter: "blur(2px)" }}
           // className="w-full h-[100%] object-cover will-change-transform scale-105"
