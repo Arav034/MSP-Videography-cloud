@@ -72,13 +72,13 @@ export default function Footer() {
           ========================================= */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
+              {/* <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
                 <Film
                   size={23}
                   strokeWidth={1.8}
                   className="text-white"
                 />
-              </div>
+              </div> */}
 
               <span className="text-xl font-semibold text-white">
                 MSP VIDEOGRAPHY
