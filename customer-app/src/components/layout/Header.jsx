@@ -17,7 +17,7 @@ export default function Header() {
           <FocusFrame padding="p-1">
             <Link
               to={ROUTES.HOME}
-              className="font-display font-semibold text-2xl tracking-wideish text-ink"
+              className="font-display font-semibold text-2xl tracking-wideish text-white"
             >
               MSP <span className="text-brand font-bold">VIDEOGRAPHY</span>
             </Link>
