@@ -40,3 +40,9 @@ Future upgrage:
       <ScrollToTopButton /> */}
       <AppRoutes />
       </> -->
+      
+  4. Header transparent images added
+     Before,
+     <!-- <header className="fixed top-0 left-0 right-0 z-50 bg-frost/90 backdrop-blur-md border-b border-mist shadow-sm transition-all duration-300"> -->
+     after,
+     <!-- <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg"> -->
