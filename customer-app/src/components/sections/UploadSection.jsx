@@ -294,12 +294,12 @@ export default function UploadSection() {
     <div
       className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat scale-105 blur-sm"
       style={{
-        backgroundImage: "url('/images/editing.jpg')",
+        backgroundImage: "url('/images/bg.jpg')",
       }}
     />
 
     {/* Background overlay */}
-    <div className="absolute inset-0 z-0 bg-white/15" />
+    <div className="absolute inset-0 z-0 bg-white/10" />
 
     {/* Main content */}
     <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-10 py-20">
