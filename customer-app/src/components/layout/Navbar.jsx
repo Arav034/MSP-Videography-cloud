@@ -12,7 +12,8 @@ export default function Navbar() {
             to={item.to}
             end
             className={({ isActive }) =>
-                cn("nav-link font-nav block px-3 py-1", isActive && "nav-link-active")
+                cn("nav-link font-nav block px-3 py-1", isActive ? "text-blue-700 font-semibold"
+                  : "hover:text-blue-800")
               }
           >
             {item.label}
