@@ -5,7 +5,7 @@ import TextArea from "@/components/forms/TextArea";
 import Spinner from "@/components/common/Spinner";
 import { createContact } from "@/services/contactform";
 
-const INITIAL_STATE = { name: "", email: "", subject: "", message: "" };
+const INITIAL_STATE = { name: "", email: "", phone: "", subject: "", message: "" };
 
 export default function ContactForm() {
   const [form, setForm] = useState(INITIAL_STATE);
@@ -28,6 +28,7 @@ export default function ContactForm() {
   //   }, 900);
   // };
 
+  const isPhoneValid = form.phone.replace(/\D/g, "").length === 10;
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +39,7 @@ export default function ContactForm() {
       const contactData = {
         name: form.name,
         email: form.email,
+        phone: form.phone,
         subject: form.subject,
         message: form.message,
         status: "New",
@@ -86,12 +88,29 @@ export default function ContactForm() {
         <TextField label="Full Name" name="name" value={form.name} onChange={handleChange} required />
         <TextField label="Email" name="email" type="email" value={form.email} onChange={handleChange} required />
       </div>
+      <div>
+        <TextField
+        label="Phone"
+        name="phone"
+        type="number"
+        value={form.phone}
+        onChange={handleChange}
+        placeholder="+91 98765 43210"
+        required />
+        
+        {form.phone && form.phone.replace(/\D/g, "").length < 10 && (
+        <p className="mt-2 text-xs text-red-500">
+          Please enter your full 10-digit phone number.
+        </p>
+       )}
+      </div>
+      
       <TextField label="Subject" name="subject" value={form.subject} onChange={handleChange} required />
       <TextArea label="Message" name="message" rows={6} value={form.message} onChange={handleChange} required />
 
      <button
         type="submit"
-        disabled={submitting}
+        disabled={submitting || !isPhoneValid}
         className="btn-primary self-start mt-2 disabled:opacity-70"
       >
         {submitting ? <Spinner /> : null}

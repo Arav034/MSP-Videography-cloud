@@ -14,9 +14,9 @@ export default function DetailsStep({ details, onChange, onNext, onBack }) {
       <h2 className="font-display text-3xl text-center mb-10">Your details</h2>
 
       <form className="max-w-md mx-auto flex flex-col gap-6">
-        <TextField label="Full Name" name="name" value={details.name} onChange={handleField} />
-        <TextField label="Email" name="email" type="email" value={details.email} onChange={handleField} />
-        <TextField label="Phone" name="phone" value={details.phone} onChange={handleField} />
+        <TextField label="Full Name" name="name" value={details.name} onChange={handleField} required />
+        <TextField label="Email" name="email" type="email" value={details.email} onChange={handleField} required/>
+        <TextField label="Phone" name="phone" type="number" value={details.phone} onChange={handleField} required />
         <TextArea label="Notes (optional)" name="notes" value={details.notes} onChange={handleField} />
       </form>
 
